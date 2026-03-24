@@ -3,385 +3,290 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>患者の味方 | 矯正専門の患者エージェント</title>
-  <meta name="description" content="矯正治療を検討中のあなたへ。費用・クリニック選び・追加料金の不安を、無料で一緒に整理します。" />
+  <title>患者の味方 | 矯正する前に、相談する場所。</title>
+  <meta name="description" content="矯正歯科市場の価格差・誘導・ステマから患者を守る、完全中立のエージェントサービス。完全無料・広告料ゼロ。" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            teal: {
-              950: '#0f2b46',
-            }
-          },
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', 'Meiryo', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
   <style>
     html { scroll-behavior: smooth; }
-    .gradient-hero { background: linear-gradient(135deg, #0f2b46 0%, #0a4d6e 60%, #0e7490 100%); }
-    .gradient-dark { background: linear-gradient(135deg, #0f2b46 0%, #134e6f 100%); }
-    details > summary { list-style: none; cursor: pointer; }
-    details > summary::-webkit-details-marker { display: none; }
-    details[open] .faq-icon { transform: rotate(45deg); }
-    .faq-icon { transition: transform 0.2s; }
+    body { font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; }
   </style>
 </head>
-<body class="font-sans text-gray-800 bg-white">
+<body class="bg-white text-gray-800 antialiased">
 
-  <!-- ヘッダー -->
-  <header class="gradient-hero text-white py-4 px-4 sticky top-0 z-50 shadow-lg">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
+  <!-- ===== ヘッダー ===== -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
       <div>
-        <div class="text-xl font-black tracking-tight">患者の味方</div>
-        <div class="text-cyan-300 text-xs mt-0.5">矯正専門の患者エージェント</div>
+        <span class="text-teal-700 font-black text-xl tracking-tight">患者の味方</span>
+        <span class="hidden sm:inline text-gray-400 text-xs ml-3">矯正する前に、相談する場所。</span>
       </div>
       <a href="#cta"
-         class="bg-green-500 hover:bg-green-400 text-white font-bold text-sm px-4 py-2 rounded-full transition">
-        無料LINE相談
+         class="bg-teal-700 hover:bg-teal-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-colors">
+        LINEで無料相談
       </a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="gradient-hero text-white pt-20 pb-24 px-4">
+  <!-- ===== Hero ===== -->
+  <section class="bg-gradient-to-br from-teal-950 via-teal-900 to-teal-700 text-white pt-24 pb-28 px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-cyan-300 text-sm font-bold tracking-widest mb-4 uppercase">Orthodontic Patient Agent</p>
-      <h1 class="text-4xl md:text-5xl font-black leading-tight mb-6">
+      <p class="text-teal-300 text-xs font-bold tracking-widest uppercase mb-5">Orthodontic Patient Agent</p>
+      <h1 class="text-4xl sm:text-5xl font-black leading-tight mb-6">
         矯正する前に、<br>相談する場所。
       </h1>
-      <p class="text-cyan-100 text-lg md:text-xl mb-10 leading-relaxed">
-        あなたの側に立つ、矯正専門のエージェントです。
+      <p class="text-teal-100 text-base sm:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        あなたの側に立つ、矯正専門のエージェントです。<br>
+        クリニックと無関係の第三者として、正直にナビゲートします。
       </p>
       <a href="#cta"
-         class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-black text-lg px-8 py-4 rounded-full shadow-xl transition">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.929 1.424 5.545 3.655 7.284L4.5 22l3.659-1.95A10.16 10.16 0 0012 20.486c5.523 0 10-4.145 10-9.243S17.523 2 12 2z"/>
-        </svg>
-        無料LINE相談を始める
+         class="inline-block bg-teal-400 hover:bg-teal-300 text-teal-950 font-black text-lg px-10 py-4 rounded-full shadow-xl transition-colors">
+        LINEで無料相談する
       </a>
-      <div class="flex items-center justify-center gap-6 mt-5 text-sm text-cyan-200">
-        <span>✓ 完全無料</span>
-        <span>✓ 押し売りなし</span>
-        <span>✓ 5分〜OK</span>
+
+      <!-- 信頼バッジ -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
+        <span class="bg-white/10 text-teal-100 text-xs font-bold px-4 py-2 rounded-full border border-white/20">✓ 完全無料</span>
+        <span class="bg-white/10 text-teal-100 text-xs font-bold px-4 py-2 rounded-full border border-white/20">✓ 広告料ゼロ・完全中立</span>
+        <span class="bg-white/10 text-teal-100 text-xs font-bold px-4 py-2 rounded-full border border-white/20">✓ 押し売り一切なし</span>
       </div>
     </div>
   </section>
 
-  <!-- WHAT WE DO -->
-  <section class="py-20 px-4 bg-gray-50">
+  <!-- ===== 問題提起：3つの罠 ===== -->
+  <section class="py-24 px-4 bg-gray-50">
     <div class="max-w-5xl mx-auto">
-      <p class="text-center text-teal-700 font-bold text-xs tracking-widest mb-2 uppercase">What We Do</p>
-      <h2 class="text-center text-2xl md:text-3xl font-black mb-12 text-gray-900">患者エージェントができること</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-3xl mb-4">🤝</div>
-          <h3 class="font-black text-gray-900 mb-2">患者ファーストの<br>アドバイス</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">クリニックから広告料を受け取らないため、あなたの利益だけを考えた提案ができます。</p>
+      <p class="text-center text-teal-700 font-bold text-xs tracking-widest uppercase mb-3">The Problem</p>
+      <h2 class="text-center text-2xl sm:text-3xl font-black mb-3 text-gray-900">
+        今、患者が直面している<span class="text-red-600">3つの罠</span>
+      </h2>
+      <p class="text-center text-gray-400 text-sm mb-12">矯正歯科市場で実際に起きていること</p>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        <!-- 罠1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-red-100">
+          <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-red-600 font-black text-lg">①</span>
+          </div>
+          <h3 class="font-black text-gray-900 text-base mb-2">価格の闇</h3>
+          <p class="text-red-600 font-bold text-sm mb-3">
+            「同じインビザラインなのにA院30万、B院130万。」
+          </p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            自由診療のため価格は完全に医院任せ。3〜5倍の価格差が普通に存在し、カウンセリング後に後出し費用が発生するケースも多発しています。
+          </p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-3xl mb-4">🔍</div>
-          <h3 class="font-black text-gray-900 mb-2">複数クリニックの<br>情報を整理</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">2〜3院の比較資料を作成。費用・設備・実績を横並びで確認できます。</p>
+        <!-- 罠2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100">
+          <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-orange-600 font-black text-lg">②</span>
+          </div>
+          <h3 class="font-black text-gray-900 text-base mb-2">治療法の誘導</h3>
+          <p class="text-orange-600 font-bold text-sm mb-3">
+            「部分矯正で済むはずが、120万の全体矯正に…」
+          </p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            利益率の高い治療への過度な誘導が横行しています。患者には比較する手段も専門知識もなく、クリニックの言うままになってしまいます。
+          </p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-3xl mb-4">💬</div>
-          <h3 class="font-black text-gray-900 mb-2">LINEで継続<br>サポート</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">相談後も疑問や不安をLINEで随時サポート。治療開始まで伴走します。</p>
+        <!-- 罠3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-yellow-100">
+          <div class="w-10 h-10 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-yellow-600 font-black text-lg">③</span>
+          </div>
+          <h3 class="font-black text-gray-900 text-base mb-2">口コミの崩壊</h3>
+          <p class="text-yellow-700 font-bold text-sm mb-3">
+            「星5ばかりの院を選んだのに、全然違った。」
+          </p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            2025年3月、消費者庁がステマに措置命令。口コミの信頼性は崩壊しつつあり、患者は正しい情報源を失っています。
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- YOUR CONCERNS -->
-  <section class="py-20 px-4 bg-white">
+  <!-- ===== 市場構造：四重苦 ===== -->
+  <section class="py-24 px-4 bg-white">
     <div class="max-w-5xl mx-auto">
-      <p class="text-center text-teal-700 font-bold text-xs tracking-widest mb-2 uppercase">Your Concerns</p>
-      <h2 class="text-center text-2xl md:text-3xl font-black mb-3 text-gray-900">こんな不安、ありませんか？</h2>
-      <p class="text-center text-gray-400 text-sm mb-12">矯正を検討中の方が感じる、4つのよくある不安</p>
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="flex gap-4 p-5 bg-red-50 rounded-2xl border border-red-100">
-          <span class="text-2xl flex-shrink-0">💰</span>
-          <div>
-            <p class="font-black text-gray-800 mb-1">同じ治療なのに、なぜ費用が50万〜130万円もバラバラ？</p>
-            <p class="text-gray-500 text-sm leading-relaxed">クリニックによって料金体系が異なり、何が正当な価格かわかりません。</p>
-          </div>
-        </div>
-        <div class="flex gap-4 p-5 bg-orange-50 rounded-2xl border border-orange-100">
-          <span class="text-2xl flex-shrink-0">⏰</span>
-          <div>
-            <p class="font-black text-gray-800 mb-1">カウンセリングで「今日決めてください」と言われた</p>
-            <p class="text-gray-500 text-sm leading-relaxed">即決を求めるクリニックに不信感。ゆっくり検討する時間が欲しい。</p>
-          </div>
-        </div>
-        <div class="flex gap-4 p-5 bg-yellow-50 rounded-2xl border border-yellow-100">
-          <span class="text-2xl flex-shrink-0">📋</span>
-          <div>
-            <p class="font-black text-gray-800 mb-1">調整料・保定装置代が後から追加されて総額が跳ね上がった</p>
-            <p class="text-gray-500 text-sm leading-relaxed">最初に聞いた金額と実際の総額が大きく違っていた経験はありませんか。</p>
-          </div>
-        </div>
-        <div class="flex gap-4 p-5 bg-blue-50 rounded-2xl border border-blue-100">
-          <span class="text-2xl flex-shrink-0">🔎</span>
-          <div>
-            <p class="font-black text-gray-800 mb-1">口コミを調べても、どこが本当にいいのかわからない</p>
-            <p class="text-gray-500 text-sm leading-relaxed">ネット上の情報は広告が多く、中立な判断材料が見つかりません。</p>
-          </div>
-        </div>
+      <p class="text-center text-teal-700 font-bold text-xs tracking-widest uppercase mb-3">Market Structure</p>
+      <h2 class="text-center text-2xl sm:text-3xl font-black mb-4 text-gray-900">四重苦の市場</h2>
+      <p class="text-center text-gray-500 text-sm mb-12 max-w-2xl mx-auto leading-relaxed">
+        矯正は単価が高く、期間が長く、失敗が不可逆で、中立な比較手段がない——<br class="hidden sm:inline">
+        消費者にとって最も「不利」な市場構造になっています。
+      </p>
+
+      <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200">
+              <th class="text-left px-5 py-4 font-bold text-gray-500 w-28"></th>
+              <th class="px-5 py-4 font-black text-teal-700 text-center">歯列矯正</th>
+              <th class="px-5 py-4 font-bold text-gray-500 text-center">美容外科</th>
+              <th class="px-5 py-4 font-bold text-gray-500 text-center">脱毛</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-bold text-gray-600">単価</td>
+              <td class="px-5 py-4 text-center font-black text-red-600">50〜150万円</td>
+              <td class="px-5 py-4 text-center text-gray-500">15〜50万円</td>
+              <td class="px-5 py-4 text-center text-gray-500">10〜30万円</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-bold text-gray-600">期間</td>
+              <td class="px-5 py-4 text-center font-black text-red-600">1〜3年</td>
+              <td class="px-5 py-4 text-center text-gray-500">当日〜数週</td>
+              <td class="px-5 py-4 text-center text-gray-500">半年〜1年</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-bold text-gray-600">失敗リスク</td>
+              <td class="px-5 py-4 text-center font-black text-red-600">高・不可逆</td>
+              <td class="px-5 py-4 text-center text-gray-500">中〜高</td>
+              <td class="px-5 py-4 text-center text-gray-500">低</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-bold text-gray-600">比較手段</td>
+              <td class="px-5 py-4 text-center font-black text-red-600">なし</td>
+              <td class="px-5 py-4 text-center text-gray-500">トリビュー等</td>
+              <td class="px-5 py-4 text-center text-gray-500">キレイパス等</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="mt-10 p-6 bg-teal-700 rounded-2xl text-white text-center">
-        <p class="font-black text-lg mb-1">そのすべてを、無料で一緒に整理します。</p>
-        <p class="text-teal-200 text-sm">患者の味方は、あなたの代わりに情報を集め・整理し・比較します。</p>
-      </div>
+      <p class="text-center text-gray-400 text-xs mt-4">※各項目は一般的な傾向を示す参考値です</p>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-center text-teal-700 font-bold text-xs tracking-widest mb-2 uppercase">How It Works</p>
-      <h2 class="text-center text-2xl md:text-3xl font-black mb-12 text-gray-900">ご利用の流れ（4ステップ）</h2>
-      <div class="space-y-5">
-        <div class="flex gap-5 items-start bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-          <div class="w-10 h-10 bg-teal-700 text-white font-black text-lg rounded-full flex items-center justify-center flex-shrink-0">1</div>
-          <div>
-            <h3 class="font-black text-gray-900 mb-1">LINEで状況をシェア</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">気になること・予算・希望エリアなど、話しやすいことから教えてください。5分程度のやり取りからOKです。</p>
-          </div>
-        </div>
-        <div class="flex gap-5 items-start bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-          <div class="w-10 h-10 bg-teal-700 text-white font-black text-lg rounded-full flex items-center justify-center flex-shrink-0">2</div>
-          <div>
-            <h3 class="font-black text-gray-900 mb-1">専門監督のもとで情報を整理</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">矯正専門医の監督のもと、あなたの状況に合ったクリニック候補を調査・整理します。</p>
-          </div>
-        </div>
-        <div class="flex gap-5 items-start bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-          <div class="w-10 h-10 bg-teal-700 text-white font-black text-lg rounded-full flex items-center justify-center flex-shrink-0">3</div>
-          <div>
-            <h3 class="font-black text-gray-900 mb-1">2〜3院の比較資料をお届け</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">費用・設備・院長の経歴・口コミを横並びで比較。「どこが自分に合うか」が一目でわかります。</p>
-          </div>
-        </div>
-        <div class="flex gap-5 items-start bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-          <div class="w-10 h-10 bg-teal-700 text-white font-black text-lg rounded-full flex items-center justify-center flex-shrink-0">4</div>
-          <div>
-            <h3 class="font-black text-gray-900 mb-1">相談後も継続サポート</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">カウンセリング後の疑問・追加料金の確認・セカンドオピニオンなど、治療開始まで伴走します。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COST SIMULATOR -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-2xl mx-auto">
-      <p class="text-center text-teal-700 font-bold text-xs tracking-widest mb-2 uppercase">Cost Simulator</p>
-      <h2 class="text-center text-2xl md:text-3xl font-black mb-3 text-gray-900">費用シミュレーター</h2>
-      <p class="text-center text-gray-400 text-sm mb-10">選択するだけで矯正費用の目安を確認できます</p>
-
-      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-        <div class="space-y-5">
-          <div>
-            <label class="block text-sm font-bold text-gray-700 mb-2">矯正の種類</label>
-            <select id="sim-type" onchange="calcSim()"
-              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
-              <option value="mouthpiece">マウスピース矯正（全体）</option>
-              <option value="wire">ワイヤー矯正（全体）</option>
-              <option value="wire_back">ワイヤー矯正（裏側）</option>
-              <option value="partial">部分矯正</option>
-              <option value="children">小児矯正</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-bold text-gray-700 mb-2">調整料の込み方</label>
-            <select id="sim-fee" onchange="calcSim()"
-              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
-              <option value="total">トータルフィー（全込み）</option>
-              <option value="monthly">都度払い（月1〜2万円別途）</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-bold text-gray-700 mb-2">エリア</label>
-            <select id="sim-area" onchange="calcSim()"
-              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
-              <option value="tokyo">東京都心（銀座・渋谷・新宿）</option>
-              <option value="suburban">東京郊外・神奈川・埼玉</option>
-              <option value="other">その他地方</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="mt-6 p-5 bg-teal-700 rounded-xl text-white text-center">
-          <p class="text-teal-200 text-xs mb-1">相場の目安（参考値）</p>
-          <p id="sim-result" class="text-3xl font-black">95万〜120万円</p>
-          <p class="text-teal-200 text-xs mt-2">※調整料・保定装置・検査料が別途かかる場合があります</p>
-        </div>
-
-        <p class="text-center mt-4">
-          <a href="#cta" class="text-teal-700 text-sm font-bold underline">
-            正確な費用を無料で確認する →
-          </a>
+  <!-- ===== ソリューション：患者の味方とは ===== -->
+  <section class="py-24 px-4 bg-teal-950 text-white">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-center text-teal-300 font-bold text-xs tracking-widest uppercase mb-3">Our Solution</p>
+      <h2 class="text-center text-2xl sm:text-3xl font-black mb-4">患者の味方とは</h2>
+      <div class="max-w-2xl mx-auto text-center mb-12">
+        <p class="text-teal-200 text-base leading-relaxed mb-2">
+          <span class="text-white font-bold">既存の比較サイトではありません。</span>
+        </p>
+        <p class="text-teal-300 text-sm leading-relaxed">
+          特定クリニックから広告料をもらって順位を操作するモデルを完全排除。<br>
+          患者の意思決定を支援する、第三者エージェント（コンシェルジュ）です。
         </p>
       </div>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+          <p class="text-teal-300 font-black text-xs mb-2">01</p>
+          <h3 class="font-black text-white text-base mb-2">正しい相場の提示</h3>
+          <p class="text-teal-200 text-sm leading-relaxed">
+            AIが適正な治療法と総額（隠れ費用なし）を即座に可視化。「適正価格」を知ることで、初めてクリニックを対等に選べます。
+          </p>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+          <p class="text-teal-300 font-black text-xs mb-2">02</p>
+          <h3 class="font-black text-white text-base mb-2">多角的スコアリング</h3>
+          <p class="text-teal-200 text-sm leading-relaxed">
+            価格明瞭性・認定医資格・症例数・安心度で客観評価。広告費ではなく実力で評価されたクリニックを提示します。
+          </p>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+          <p class="text-teal-300 font-black text-xs mb-2">03</p>
+          <h3 class="font-black text-white text-base mb-2">操作不可能な口コミ</h3>
+          <p class="text-teal-200 text-sm leading-relaxed">
+            治療完了者だけが投稿できるシステム。ステマを構造的に排除し、本当の患者の声だけを掲載します。
+          </p>
+        </div>
+        <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+          <p class="text-teal-300 font-black text-xs mb-2">04</p>
+          <h3 class="font-black text-white text-base mb-2">中立なクリニック紹介</h3>
+          <p class="text-teal-200 text-sm leading-relaxed">
+            比較から予約まで一気通貫。患者負担は完全無料。クリニックへの紹介料のみで運営するため、利益相反が構造的に発生しません。
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="py-20 px-4 gradient-dark text-white">
+  <!-- ===== フロー：5ステップ ===== -->
+  <section class="py-24 px-4 bg-gray-50">
     <div class="max-w-5xl mx-auto">
-      <p class="text-center text-cyan-300 font-bold text-xs tracking-widest mb-2 uppercase">Why Choose Us</p>
-      <h2 class="text-center text-2xl md:text-3xl font-black mb-4">広告料ゼロだから、<br>あなたの利益だけを考えられる</h2>
-      <p class="text-center text-cyan-200 text-sm mb-12">一般的なクリニック紹介サービスと、患者の味方の違い</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
-          <div class="text-3xl mb-4">🎓</div>
-          <h3 class="font-black mb-2">矯正専門医が監修</h3>
-          <p class="text-cyan-200 text-sm leading-relaxed">提供する情報・比較資料は矯正専門医の監修のもとで作成。医療的な正確性を担保しています。</p>
+      <p class="text-center text-teal-700 font-bold text-xs tracking-widest uppercase mb-3">How It Works</p>
+      <h2 class="text-center text-2xl sm:text-3xl font-black mb-12 text-gray-900">5つのステップ</h2>
+
+      <!-- PC：横並び / SP：縦積み -->
+      <div class="flex flex-col sm:flex-row items-stretch gap-3">
+        <div class="flex-1 bg-white rounded-2xl border border-teal-100 p-5 text-center shadow-sm">
+          <div class="w-8 h-8 bg-teal-700 text-white font-black text-sm rounded-full flex items-center justify-center mx-auto mb-3">1</div>
+          <p class="font-black text-gray-800 text-sm">認知</p>
+          <p class="text-gray-400 text-xs mt-1">SNS・検索で知る</p>
         </div>
-        <div class="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
-          <div class="text-3xl mb-4">⚖️</div>
-          <h3 class="font-black mb-2">完全中立・広告料ゼロ</h3>
-          <p class="text-cyan-200 text-sm leading-relaxed">クリニックから紹介料・広告料を一切受け取りません。患者さんの利益だけを考えた提案をします。</p>
+        <div class="hidden sm:flex items-center text-teal-300 font-black text-xl">→</div>
+        <div class="flex-1 bg-white rounded-2xl border border-teal-100 p-5 text-center shadow-sm">
+          <div class="w-8 h-8 bg-teal-700 text-white font-black text-sm rounded-full flex items-center justify-center mx-auto mb-3">2</div>
+          <p class="font-black text-gray-800 text-sm">相談</p>
+          <p class="text-gray-400 text-xs mt-1">LINEで状況をシェア</p>
         </div>
-        <div class="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
-          <div class="text-3xl mb-4">🔒</div>
-          <h3 class="font-black mb-2">押し売りゼロ</h3>
-          <p class="text-cyan-200 text-sm leading-relaxed">情報提供・比較サポートのみ。最終的な判断はすべてあなた自身です。決して急かしません。</p>
+        <div class="hidden sm:flex items-center text-teal-300 font-black text-xl">→</div>
+        <div class="flex-1 bg-white rounded-2xl border border-teal-100 p-5 text-center shadow-sm">
+          <div class="w-8 h-8 bg-teal-700 text-white font-black text-sm rounded-full flex items-center justify-center mx-auto mb-3">3</div>
+          <p class="font-black text-gray-800 text-sm">整理</p>
+          <p class="text-gray-400 text-xs mt-1">費用・治療法を整理</p>
+        </div>
+        <div class="hidden sm:flex items-center text-teal-300 font-black text-xl">→</div>
+        <div class="flex-1 bg-white rounded-2xl border border-teal-100 p-5 text-center shadow-sm">
+          <div class="w-8 h-8 bg-teal-700 text-white font-black text-sm rounded-full flex items-center justify-center mx-auto mb-3">4</div>
+          <p class="font-black text-gray-800 text-sm">提案</p>
+          <p class="text-gray-400 text-xs mt-1">2〜3院を比較提案</p>
+        </div>
+        <div class="hidden sm:flex items-center text-teal-300 font-black text-xl">→</div>
+        <div class="flex-1 bg-white rounded-2xl border border-teal-200 bg-teal-50 p-5 text-center shadow-sm">
+          <div class="w-8 h-8 bg-teal-700 text-white font-black text-sm rounded-full flex items-center justify-center mx-auto mb-3">5</div>
+          <p class="font-black text-teal-700 text-sm">予約</p>
+          <p class="text-teal-500 text-xs mt-1">納得してカウンセリングへ</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-20 px-4 bg-gray-50">
+  <!-- ===== 創業者ストーリー ===== -->
+  <section class="py-24 px-4 bg-teal-700">
     <div class="max-w-3xl mx-auto">
-      <p class="text-center text-teal-700 font-bold text-xs tracking-widest mb-2 uppercase">FAQ</p>
-      <h2 class="text-center text-2xl md:text-3xl font-black mb-12 text-gray-900">よくある質問</h2>
-      <div class="space-y-3">
-        <details class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <summary class="flex items-center justify-between p-5 font-bold text-gray-800">
-            本当に無料ですか？
-            <span class="faq-icon text-teal-700 text-xl font-black ml-4 flex-shrink-0">+</span>
-          </summary>
-          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
-            はい、患者さんへのサービスは完全無料です。成約時にクリニックからのみ紹介料をいただく仕組みで、患者さんへの費用請求は一切ありません。
-          </div>
-        </details>
-        <details class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <summary class="flex items-center justify-between p-5 font-bold text-gray-800">
-            特定のクリニックを勧めてくることはありますか？
-            <span class="faq-icon text-teal-700 text-xl font-black ml-4 flex-shrink-0">+</span>
-          </summary>
-          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
-            提携クリニックの中から、あなたの条件・エリア・予算に最も合う2〜3院を中立的にご紹介します。特定クリニックへの誘導は行いません。
-          </div>
-        </details>
-        <details class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <summary class="flex items-center justify-between p-5 font-bold text-gray-800">
-            矯正を始めることが決まっていなくても相談できますか？
-            <span class="faq-icon text-teal-700 text-xl font-black ml-4 flex-shrink-0">+</span>
-          </summary>
-          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
-            もちろんです。「まだ検討段階」「費用感だけ知りたい」という段階からお気軽にどうぞ。相談したからといって治療を始める義務はありません。
-          </div>
-        </details>
-        <details class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <summary class="flex items-center justify-between p-5 font-bold text-gray-800">
-            対応エリアはどこですか？
-            <span class="faq-icon text-teal-700 text-xl font-black ml-4 flex-shrink-0">+</span>
-          </summary>
-          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
-            現在は東京都内・神奈川・埼玉を中心に対応しています。その他エリアについてはご相談ください。
-          </div>
-        </details>
-      </div>
+      <p class="text-teal-200 font-bold text-xs tracking-widest uppercase mb-6 text-center">Founder's Story</p>
+      <blockquote class="text-white text-lg sm:text-xl leading-relaxed font-medium text-center">
+        「20年前、不動産業界で全く同じ構造に怒り、<br class="hidden sm:inline">
+        売主側に立つエージェントサービスを作りました。<br>
+        その会社はソニーグループに売却されました。<br><br>
+        今度は矯正歯科市場で、同じことをします。」
+      </blockquote>
+      <p class="text-teal-300 text-sm text-center mt-6">— 代表</p>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-24 px-4 gradient-hero text-white">
-    <div class="max-w-2xl mx-auto text-center">
-      <p class="text-cyan-300 font-bold text-xs tracking-widest mb-4 uppercase">Get Started</p>
-      <h2 class="text-3xl md:text-4xl font-black mb-4">まず、話すだけでOK。</h2>
-      <p class="text-cyan-100 text-lg mb-10 leading-relaxed">
+  <!-- ===== CTA ===== -->
+  <section id="cta" class="py-24 px-4 bg-white">
+    <div class="max-w-xl mx-auto text-center">
+      <p class="text-teal-700 font-bold text-xs tracking-widest uppercase mb-4">Get Started</p>
+      <h2 class="text-3xl sm:text-4xl font-black mb-4 text-gray-900">まず、話すだけでOK。</h2>
+      <p class="text-gray-500 text-base leading-relaxed mb-10">
         費用のこと、クリニック選び、不安なこと。<br>
         なんでもLINEで聞いてください。
       </p>
       <a href="https://lin.ee/placeholder"
          target="_blank"
-         class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-black text-xl px-10 py-5 rounded-full shadow-2xl transition">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.929 1.424 5.545 3.655 7.284L4.5 22l3.659-1.95A10.16 10.16 0 0012 20.486c5.523 0 10-4.145 10-9.243S17.523 2 12 2z"/>
-        </svg>
-        無料LINE相談を始める
+         class="inline-block bg-teal-700 hover:bg-teal-600 text-white font-black text-lg px-10 py-5 rounded-full shadow-xl transition-colors mb-4">
+        LINEで無料相談する（完全無料）
       </a>
-      <div class="flex items-center justify-center gap-8 mt-6 text-cyan-200 text-sm">
-        <span>✓ 完全無料</span>
-        <span>✓ 押し売りなし</span>
-        <span>✓ 5分〜OK</span>
-      </div>
+      <p class="text-gray-400 text-xs mb-6">48時間以内に専門スタッフからご連絡します</p>
+      <a href="https://patients-ally.vercel.app"
+         target="_blank"
+         class="text-teal-700 hover:text-teal-600 text-sm font-bold underline transition-colors">
+        自分でクリニックを比較したい方はこちら →
+      </a>
     </div>
   </section>
 
-  <!-- フッター -->
-  <footer class="gradient-dark text-white py-10 px-4">
-    <div class="max-w-5xl mx-auto">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <div>
-          <div class="font-black text-lg">患者の味方</div>
-          <div class="text-cyan-300 text-xs mt-0.5">矯正専門の患者エージェント</div>
-        </div>
-        <div class="text-center">
-          <!-- patients-allyポータルへの導線 -->
-          <a href="https://patients-ally.vercel.app"
-             target="_blank"
-             class="text-teal-300 hover:text-teal-100 text-sm font-bold transition">
-            自分でクリニックを比較したい方はこちら →
-          </a>
-        </div>
-        <div class="text-gray-400 text-xs">© 2025 患者の味方</div>
-      </div>
-    </div>
+  <!-- ===== フッター ===== -->
+  <footer class="bg-teal-950 text-teal-400 py-8 px-4 text-center">
+    <p class="text-sm">© 2026 患者の味方</p>
   </footer>
 
-  <script>
-    // シミュレーター計算
-    const SIM_PRICES = {
-      mouthpiece: { low: 80, high: 120 },
-      wire:       { low: 70, high: 110 },
-      wire_back:  { low: 120, high: 180 },
-      partial:    { low: 30, high: 50 },
-      children:   { low: 35, high: 55 },
-    };
-    const AREA_MULTIPLIER = { tokyo: 1.1, suburban: 1.0, other: 0.85 };
-    const FEE_ADD = { total: 0, monthly: 20 };
-
-    function calcSim() {
-      const type = document.getElementById('sim-type').value;
-      const fee  = document.getElementById('sim-fee').value;
-      const area = document.getElementById('sim-area').value;
-      const base = SIM_PRICES[type];
-      const mul  = AREA_MULTIPLIER[area];
-      const add  = FEE_ADD[fee];
-      const low  = Math.round(base.low  * mul + add);
-      const high = Math.round(base.high * mul + add);
-      document.getElementById('sim-result').textContent = low + '万〜' + high + '万円';
-    }
-
-    // FAQアイコン制御
-    document.querySelectorAll('details').forEach(d => {
-      d.addEventListener('toggle', () => {
-        const icon = d.querySelector('.faq-icon');
-        icon.textContent = d.open ? '×' : '+';
-      });
-    });
-  </script>
 </body>
 </html>
